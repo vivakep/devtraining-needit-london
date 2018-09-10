@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt1" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element choice="1" label="My Request Type" mandatory="true" max_length="40" name="my_request_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" value="hr"/>
+                <element inactive_on_update="false" label="Legal" language="fr" value="légal"/>
+            </choice>
+        </element>
+        <element label="test field" max_length="40" name="test_field" type="string"/>
+        <element label="Requested for" max_length="32" name="ur_requestedfor" reference="sys_user" type="reference"/>
+        <element label="User" mandatory="true" max_length="32" name="ur_user" reference="sys_user" type="reference"/>
+        <element label="When needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request Type" max_length="40" name="u_requesttype" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What Needed" max_length="40" name="u_whatneeded" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="Human Resources2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="Legal1" sequence="2" value="legal1"/>
+                <element inactive_on_update="false" label="Legal2" sequence="3" value="legal2"/>
+            </choice>
+        </element>
+    </element>
+</database>
